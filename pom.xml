@@ -1,3 +1,13 @@
+<!--
+    This file is by me for me, and me only!! It is used to build my groovy code.
+
+    Since I push this to my Repsy repo, from which this will be read when building,
+    it will also be downloaded.
+
+    DO NOT reuse this for your projects, make your own instead!!!
+
+    This is private and internal for me! I can break it at any time!
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -7,8 +17,7 @@
     <artifactId>groovy-build</artifactId>
     <!-- major.minor.bytecode  -->
     <version>1.0.11</version>
-
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <!--
         Configuration
@@ -18,7 +27,7 @@
         <!--
             Version of Groovy to use.
         -->
-        <groovy.version>4.0.21</groovy.version>
+        <groovy.version>4.0.22</groovy.version>
 
         <!--
             Version of byte-code to produce.
@@ -34,7 +43,7 @@
         <dependency>
             <groupId>org.apache.groovy</groupId>
             <artifactId>groovy</artifactId>
-            <version>4.0.21</version>
+            <version>4.0.22</version>
         </dependency>
     </dependencies>
 
@@ -50,11 +59,10 @@
         </repository>
     </distributionManagement>
 
-
     <repositories>
         <repository>
             <id>repsy</id>
-            <name>My Private Maven Repository on Repsy</name>
+            <name>My Maven Repository on Repsy</name>
             <url>https://repo.repsy.io/mvn/tombensve/natusoft-os</url>
         </repository>
 
@@ -192,86 +200,5 @@
         </plugins>
 
     </build>
-
-    <!--
-        Profiles
-    -->
-    <profiles>
-        <profile>
-            <id>apply-licence-info</id>
-            <build>
-                <plugins>
-                    <plugin>
-
-                        <groupId>se.natusoft.tools.codelicmgr</groupId>
-                        <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                        <version>2.2.6</version>
-
-                        <dependencies>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-source-updater-slashstar-comment</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-source-updater-html-xml</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                        </dependencies>
-
-                        <configuration>
-                            <project>
-                                <codeVersion>${project.version}</codeVersion>
-                            </project>
-                            <!-- All options are optional. -->
-                            <codeOptions>
-                                <verbose>true</verbose>
-                                <!-- If not set uses extension on source file to resolve. -->
-                                <codeLanguage><!-- by source extension. -->
-                                    Groovy
-                                </codeLanguage>
-                                <!-- If true updates the license information in source code. -->
-                                <updateLicenseInfo>true</updateLicenseInfo>
-                                <!-- If true updates the copyright information in source code. -->
-                                <updateCopyright>true</updateCopyright>
-                                <!-- If true updates the project information in source code. -->
-                                <updateProject>true</updateProject>
-                                <!-- If true will add authors information to source files that does not have it. This is not always implemented! -->
-                                <addAuthorsBlock>true</addAuthorsBlock>
-                                <!-- The directories to scan for source code to update with project & license information. -->
-                                <sourceCodeDirs>
-                                    src/main/groovy/**/.*.groovy,src/test/groovy/**/.*.groovy,src/assembly/**/.*.xml
-                                </sourceCodeDirs>
-
-                            </codeOptions>
-
-                            <userData>
-                                <!--name></name>
-                                <value></value-->
-                            </userData>
-
-                        </configuration>
-
-                        <executions>
-                            <execution>
-                                <id>apply-licence-info</id>
-                                <goals>
-                                    <goal>apply</goal>
-                                </goals>
-                                <phase>generate-sources</phase>
-                            </execution>
-                        </executions>
-
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
