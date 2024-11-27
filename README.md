@@ -12,6 +12,8 @@
         </dependencies>
     </dependencyManagement> 
 
+Or specify as parent!
+
 This is my new version standard for my projects. 
 
 At the moment there is only byte code 11 available! Personally I have no interest in
