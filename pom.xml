@@ -13,9 +13,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.tombensve</groupId>
+    <groupId>se.natusoft</groupId>
     <artifactId>groovy-build</artifactId>
-    <!-- major.minor.??-BC(bytecode)  -->
+    <!-- major.minor.??-BC<bytecode>  -->
     <version>1.0.0-BC11</version>
     <packaging>pom</packaging>
 
