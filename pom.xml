@@ -16,7 +16,7 @@
     <groupId>se.natusoft</groupId>
     <artifactId>groovy-build</artifactId>
     <!-- major.minor.??-BC<bytecode>  -->
-    <version>1.0.0-BC11</version>
+    <version>1.1.0-BC11</version>
     <packaging>pom</packaging>
 
     <!--
@@ -27,7 +27,7 @@
         <!--
             Version of Groovy to use.
         -->
-        <groovy.version>4.0.22</groovy.version>
+        <groovy.version>4.0.23</groovy.version>
 
         <!--
             Version of byte-code to produce.
