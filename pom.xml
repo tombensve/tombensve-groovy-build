@@ -15,7 +15,18 @@
 
     <groupId>se.natusoft</groupId>
     <artifactId>groovy-build</artifactId>
-    <version>1.1.0-G23</version>
+    <!--
+        Bytecode: 11
+        Groovy: 4.0.25
+
+        I first tried to bake both the version of this POM and the
+        version of groovy into the version, which I have just realized
+        was a really bad idea! From now on this POM has its own version
+        and, you have to look at it to determine what byte code and what
+        groovy version is used.
+    -->
+    <version>2.0.0</version>
+
     <packaging>pom</packaging>
 
     <!--
@@ -26,7 +37,7 @@
         <!--
             Version of Groovy to use.
         -->
-        <groovy.version>4.0.23</groovy.version>
+        <groovy.version>4.0.25</groovy.version>
 
         <!--
             Version of byte-code to produce.
