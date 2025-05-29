@@ -17,7 +17,7 @@
     <artifactId>groovy-build</artifactId>
     <!--
         Bytecode: 11
-        Groovy: 4.0.25
+        Groovy: 4.0.27
 
         I first tried to bake both the version of this POM and the
         version of groovy into the version, which I have just realized
@@ -25,7 +25,7 @@
         and, you have to look at it to determine what byte code and what
         groovy version is used.
     -->
-    <version>2.0.1</version>
+    <version>2.0.2</version>
 
     <packaging>pom</packaging>
 
@@ -37,7 +37,7 @@
         <!--
             Version of Groovy to use.
         -->
-        <groovy.version>4.0.25</groovy.version>
+        <groovy.version>4.0.27</groovy.version>
 
         <!--
             Version of byte-code to produce.
