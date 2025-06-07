@@ -21,8 +21,8 @@
 
         I first tried to bake both the version of this POM and the
         version of groovy into the version, which I have just realized
-        was a really bad idea! From now on this POM has its own version
-        and, you have to look at it to determine what byte code and what
+        was a bad idea! From now on, this POM has its own version, and
+        you have to look at it to determine what byte code and what
         groovy version is used.
     -->
     <version>2.0.2</version>
